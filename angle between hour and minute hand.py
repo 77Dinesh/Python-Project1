@@ -13,7 +13,6 @@ def calcAngle(h,m):
 # handle 24-hour notation
         if(h>12):
             h = h-12;
-# Calculate the angles moved by
 # hour and minute hands with reference to 12:00
 hour_angle = 0.5 * (h * 60 + m)
 minute_angle = 6 * m
@@ -22,7 +21,8 @@ angle = abs(hour_angle - minute_angle)
 # Return the smaller angle of two possible angles
 angle = min(360 - angle, angle)
     return angle
-# Driver Code
+
 h = int(input("Enter Hours: "))
 m = int(input("Enter Minutes: "))
 print("{}°".format (calcAngle(h,m)))
+#This code is finding angle by 12:00
